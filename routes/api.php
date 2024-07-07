@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\BeYourOwnLevelController;
 use App\Http\Controllers\API\HeroController;
 use App\Http\Controllers\API\TrendingController;
 use Illuminate\Http\Request;
@@ -11,4 +12,5 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/heroes', [HeroController::class, 'index']);
-Route::get('trendings', [TrendingController::class, 'index']);
+Route::get('/trendings', [TrendingController::class, 'index']);
+Route::get('/be/your/own/levels', [BeYourOwnLevelController::class, 'index']);
